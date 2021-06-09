@@ -1,3 +1,9 @@
+## Installation
+```bash
+composer require xooooooox/http
+``` 
+
+## For example
 ```php
 <?php
 
