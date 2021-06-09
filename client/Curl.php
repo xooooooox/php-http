@@ -63,7 +63,7 @@ class Curl
      * @param string $response
      * @return array
      */
-    public static function getAll(string $response = '') : array {
+    public static function GetAll(string $response = '') : array {
         return explode(PHP_EOL, $response);
     }
 
@@ -72,7 +72,7 @@ class Curl
      * @param string $response
      * @return array
      */
-    public static function getHeader(string $response = '') : array {
+    public static function GetHeader(string $response = '') : array {
         $response = explode(PHP_EOL, $response);
         // delete response body data
         array_pop($response);
@@ -86,7 +86,7 @@ class Curl
      * @param string $response
      * @return string
      */
-    public static function getBody(string $response = '') : string {
+    public static function GetBody(string $response = '') : string {
         $response = explode(PHP_EOL, $response);
         return end($response);
     }
