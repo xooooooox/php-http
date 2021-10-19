@@ -22,6 +22,7 @@ class Curl
         curl_setopt($curl, CURLOPT_HEADER, 1);
         curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_TIMEOUT,5);
         $response = curl_exec($curl);
         curl_close($curl);
         if (is_bool($response)){
@@ -46,6 +47,7 @@ class Curl
         curl_setopt($curl, CURLOPT_HEADER, 1);
         curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_TIMEOUT,5);
         $response = curl_exec($curl);
         $error = curl_errno($curl);
         curl_close($curl);
